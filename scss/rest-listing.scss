@@ -5,6 +5,10 @@
     margin: 0;
     padding: 30px 15px 60px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
     li {
         background-color: #fff;
@@ -14,7 +18,10 @@
         min-height: 380px;
         padding: 0 30px 25px;
         text-align: left;
-        width: 270px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
 
         h1 {
             color: #f18200;

@@ -1,14 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
-body,td,th,p{
+body,td,th,p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
 	color: #333;
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+	background-color: #f3f3f3;
 	margin: 0;
 	position:relative;
 }
@@ -19,15 +19,11 @@ ul, li {
 }
 a {
 	color: orange;
-	text-decoration: none;
-}
-a {
+    text-decoration: none;
     &:focus {
         color: #3397db;
         text-decoration: none;
     }
-}
-a {
     img {
         border: none 0px #fff;
     }
@@ -39,9 +35,15 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 #footer {
   background-color: #444;
@@ -51,4 +53,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
+}
+
+.not-map-container {
+  width: 100%;
 }

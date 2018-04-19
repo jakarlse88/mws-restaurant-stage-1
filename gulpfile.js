@@ -21,7 +21,7 @@ gulp.task('webserver', () => {
     gulp.src('.')
         .pipe(server({
             livereload: true,
-            directoryListing: true,
+            // directoryListing: true,
             open: true,
             log: 'debug',
             clientConsole: true
