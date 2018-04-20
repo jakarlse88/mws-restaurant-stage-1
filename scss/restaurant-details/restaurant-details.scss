@@ -81,69 +81,63 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  #reviews-list {
     li {
-        background-color: #fff;
-        border: 2px solid #f3f3f3;
-        list-style-type: none;
-        width: 85%;
+      background-color: #fff;
+      border: 2px solid #eeeeee;
+      list-style-type: none;
+      width: 85%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 0 0 2em;
+      border-radius: 0 0 16px;
+      p {
+        margin: 0 0 10px;
+      }
+      .review-header {
+        background: #333333;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
-        margin: 0 0 2em;
-        border-radius: 0 0 16px;
-        .review-header {
-          background: #333333;
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          padding: .5em 0;
-          border-radius: 16px 0 0 0;
-          .review-name {
-            color: #ffffff;
-            order: 0;
-            width: 50%;
-            font-size: 1.8em;
-            margin: auto 0 auto 1em;
-          }
-          .review-date {
-            color: #c7c7c7;
-            order: 0;
-            width: 50%;
-            text-align: right;
-            margin: auto 1em auto 0;
-            font-size: 1.1em;
-          }
+        padding: .5em 0;
+        border-radius: 16px 0 0 0;
+        .review-name {
+          color: #ffffff;
+          order: 0;
+          width: 50%;
+          font-size: 1.8em;
+          margin: auto 0 auto 1em;
         }
-        .review-rating {
-          margin: 1em 0 0 3em;
-          padding: .3em 1em;
-          color: white;
-          font-weight: bold;
-          background-color: orange;
-          text-transform: uppercase;
-          border-radius: 4px;
-          letter-spacing: 2px;
-          align-self: flex-start;
+        .review-date {
+          color: #c7c7c7;
+          order: 0;
+          width: 50%;
+          text-align: right;
+          margin: auto 1em auto 0;
+          font-size: 1.1em;
         }
-        .review-comments {
-          margin: 1em 2em;
-          width: 90%;
-        }
-    }
+      }
+      .review-rating {
+        margin: 1em 0 0 3em;
+        padding: .3em 1em;
+        color: white;
+        font-weight: bold;
+        background-color: orange;
+        text-transform: uppercase;
+        border-radius: 4px;
+        letter-spacing: 2px;
+        align-self: flex-start;
+      }
+      .review-comments {
+        margin: 1em 2em;
+        width: 90%;
+      }
   }
-  #reviews-list {
-    li {
-        p {
-            margin: 0 0 10px;
-        }
-    }
+}
+#restaurant-hours {
+  td {
+      color: #666;
   }
-  #restaurant-hours {
-    td {
-        color: #666;
-    }
-  }
+}

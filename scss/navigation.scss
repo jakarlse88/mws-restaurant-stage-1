@@ -3,6 +3,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     nav {
         width: 100%;
         height: 80px;
@@ -15,41 +16,40 @@ header {
             margin: 0;
             a {
                 color: #fff;
-                font-size: 14pt;
+                font-size: 1em;
                 font-weight: 200;
-                letter-spacing: 10px;
+                letter-spacing: 6px;
                 text-transform: uppercase;
             }
         }
     }
-}
-
-#breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    width: 100%;
-
-    /* Display list items side by side */
-    li {
-        display: inline;
-        /* Add a color to all links inside the list */
-        a {
-            color: #0275d8;
-            text-decoration: none;
-            /* Add a color on mouse-over */
-            &:hover {
-                color: #01447e;
-                text-decoration: underline;
+    #breadcrumb {
+        padding: 10px 40px 16px;
+        list-style: none;
+        background-color: #eee;
+        font-size: 17px;
+        margin: auto;
+        width: 100%;
+        /* Display list items side by side */
+        li {
+            display: inline;
+            /* Add a color to all links inside the list */
+            a {
+                color: #0275d8;
+                text-decoration: none;
+                /* Add a color on mouse-over */
+                &:hover {
+                    color: #01447e;
+                    text-decoration: underline;
+                }
             }
         }
-    }
-    /* Add a slash symbol (/) before/behind each list item */
-    li+li:before {
-        padding: 8px;
-        color: black;
-        content: "/\00a0";
+        /* Add a slash symbol (/) before/behind each list item */
+        li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
     }
 }
+

@@ -10,7 +10,9 @@ body,td,th,p {
 body {
 	background-color: #f3f3f3;
 	margin: 0;
-	position:relative;
+  position:relative;
+  font-size: 24px;
+  box-sizing: border-box;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
