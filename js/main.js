@@ -10,6 +10,7 @@ var markers = []
 document.addEventListener('DOMContentLoaded', (event) => {
   fetchNeighborhoods();
   fetchCuisines();
+  registerServiceWorker();
 });
 
 /**
@@ -180,5 +181,21 @@ addMarkersToMap = (restaurants = self.restaurants) => {
       window.location.href = marker.url
     });
     self.markers.push(marker);
+  });
+}
+
+/**
+ * Service Worker magic
+ */
+registerServiceWorker = () => {
+  if (!'serviceWorker' in navigator) {
+    return;
+  }
+
+  navigator.serviceWorker.register('./index-sw.js')
+  .then((reg) => {
+    console.log('Service Worker registration succeeded', reg);
+  }).catch((err) => {
+    console.log('Service Worker registration failed', err);
   });
 }
