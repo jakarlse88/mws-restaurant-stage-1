@@ -30,6 +30,14 @@ gulp.task('watch', ['sass'], () => {
 
 gulp.task('webserver', () => {
     gulp.src('.')
+        .pipe(plumber({ errorHandler: (err) => {
+            notify.onError({
+                title: `Gulp error in ${err.plugin}`,
+                message: err.toString()
+            })(err)
+
+            gutil.beep();
+        }}))
         .pipe(server({
             livereload: true,
             open: true,

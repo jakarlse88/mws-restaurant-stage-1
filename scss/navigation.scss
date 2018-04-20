@@ -1,25 +1,33 @@
 /* ====================== Navigation ====================== */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     nav {
         width: 100%;
-        height: 80px;
+        height: 60px;
         background-color: #252831;
         display: flex;
-        align-items: center;
         justify-content: center;
         h1 {
-            padding: 0;
-            margin: 0;
             a {
+                margin: auto 0;
                 color: #fff;
                 font-size: 1em;
                 font-weight: 200;
                 letter-spacing: 6px;
                 text-transform: uppercase;
+                @media screen and (max-width: 600px) {
+                    font-size: 1em;
+                    letter-spacing: 4px;
+                }
+                @media screen and (max-width: 520px) {
+                    font-size: .8em;
+                    letter-spacing: 2px;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: .6em;
+                }
+                @media screen and (max-width: 300px) {
+                    font-size: .5em;
+                }
             }
         }
     }

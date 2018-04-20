@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+* {
+  box-sizing: border-box;
+}
+
 body,td,th,p {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -12,7 +16,7 @@ body {
 	margin: 0;
   position:relative;
   font-size: 24px;
-  box-sizing: border-box;
+  width: 100%;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -56,8 +60,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+  // box-sizing: border-box;
 }
 
 .not-map-container {
-  width: 100%;
+  width: 100vw;
 }
