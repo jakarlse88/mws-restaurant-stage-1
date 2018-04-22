@@ -16,19 +16,19 @@ class DBHelper {
    * Fetch all restaurants.
    */
   static fetchRestaurants(callback) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', DBHelper.DATABASE_URL);
-    xhr.onload = () => {
-      if (xhr.status === 200) { // Got a success response from server!
-        const json = JSON.parse(xhr.responseText);
-        const restaurants = json.restaurants;
-        callback(null, restaurants);
-      } else { // Oops!. Got an error from server.
-        const error = (`Request failed. Returned status of ${xhr.status}`);
-        callback(error, null);
-      }
-    };
-    xhr.send();
+	let xhr = new XMLHttpRequest();
+	xhr.open('GET', DBHelper.DATABASE_URL);
+	xhr.onload = () => {
+		if (xhr.status === 200) { // Got a success response from server!
+		const json = JSON.parse(xhr.responseText);
+		const restaurants = json.restaurants;
+		callback(null, restaurants);
+		} else { // Oops!. Got an error from server.
+		const error = (`Request failed. Returned status of ${xhr.status}`);
+		callback(error, null);
+		}
+	};
+	xhr.send();
   }
 
   /**
@@ -166,5 +166,21 @@ class DBHelper {
     );
     return marker;
   }
+
+/**
+ * Service Worker registration
+ */
+// static registerServiceWorker() {
+// 	if (!'serviceWorker' in navigator) {
+// 	  return;
+// 	}
+  
+// 	navigator.serviceWorker.register('./sw.js', { scope: '/'})
+// 	.then((reg) => {
+// 	  console.log('Service Worker registration succeeded', reg);
+// 	}).catch((err) => {
+// 	  console.log('Service Worker registration failed', err);
+// 	});
+//   }
 
 }
