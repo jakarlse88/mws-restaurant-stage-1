@@ -6,6 +6,7 @@
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#333">
   <title>Restaurant Reviews</title>
 </head>
 
@@ -17,17 +18,19 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container" tabindex="-1">
+    <section id="map-container" tabindex="-1" role="application">
       <div id="map"></div>
     </section>
     <section class="info-container">
       <div class="filter-options">
         <h2>Filter Results</h2>
         <form class="select">
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Dropdown menu: filter search by neighborhood">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" 
+                  aria-label="Dropdown menu: filter search by neighborhood" role="listbox">
             <option value="all">All Neighborhoods</option>
           </select>
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Dropdown menu: filter search by cuisine">
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" 
+                  aria-label="Dropdown menu: filter search by cuisine" role="listbox">
             <option value="all">All Cuisines</option>
           </select>
         </form>
@@ -41,7 +44,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXQ74ynibYH3vgpb43DLLOGnABtMO7GXw&libraries=places&callback=initMap"></script>
 
 
-  <footer id="footer" tabindex="0">
+  <footer id="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
