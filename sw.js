@@ -1,3 +1,7 @@
+/* From Udacity's "Introducing the Service Worker" lesson and
+ * https://jakearchibald.com/2014/offline-cookbook/ 
+ */
+
 /* Static cache name */
 var staticCacheName = 'rr-static-v1';
 

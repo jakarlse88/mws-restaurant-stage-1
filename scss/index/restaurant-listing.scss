@@ -43,8 +43,7 @@
                 margin: 0 10px;
                 text-transform: uppercase;
                 &:focus {
-                    color: orange;
-                    outline: none;
+                    outline: 4px solid orange;
                 }
                 @media screen and (max-width: 350px) {
                     font-size: 1em;
@@ -66,8 +65,7 @@
             margin: 0 0 1em;
             border-radius: 16px 0 16px;
             &:focus, &:hover {
-                color: orange;
-                background-color: #252831;
+                outline: 4px solid #333;
                 text-decoration: underline;
             }
         }

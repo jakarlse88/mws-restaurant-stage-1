@@ -61,6 +61,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
   width: 100%;
+  &:focus {
+    outline: 4px solid orange;
+  }
 }
 
 .info-container {
@@ -68,6 +71,5 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 *:focus, a:focus {
-  outline: 2px solid #f3f3f3;
-  color: orange;
+  outline: 4px solid orange;
 }

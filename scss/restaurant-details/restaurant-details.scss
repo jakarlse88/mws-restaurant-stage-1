@@ -152,6 +152,9 @@
         letter-spacing: 2px;
         align-self: flex-start;
         text-align: left;
+        &:focus {
+          outline: 4px solid #333;
+        }
         @media screen and (max-width: 600px) {
           margin: 1em auto 0 .6em;
         }
@@ -175,5 +178,8 @@
   }
   td {
       color: #333;
+      &:focus {
+        outline: 4px solid orange;
+      }
   }
 }
