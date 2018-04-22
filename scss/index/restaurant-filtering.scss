@@ -1,7 +1,7 @@
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
 	width: 100vw;
-	background-color: #3397DB;
+	background-color: #252831;
 	align-items: center;
 	display: flex;
 	align-items: center;
@@ -29,6 +29,11 @@
 		margin: 10px;
 		padding: 0 10px;
 		width: 200px;
+		&:focus {
+			font-weight: bold;
+			outline: 2px solid orange;
+			text-decoration: underline;
+		}
 		@media screen and (max-width: 450px) {
 			font-size: .5em;
 			width: 150px;

@@ -12,8 +12,13 @@ header {
                 color: #fff;
                 font-size: 1em;
                 font-weight: 200;
-                letter-spacing: 6px;
+                letter-spacing: 10px;
                 text-transform: uppercase;
+                &:focus {
+                    color: orange;
+                    text-decoration: underline;
+                    outline: none;
+                }
                 @media screen and (max-width: 600px) {
                     font-size: 1em;
                     letter-spacing: 4px;
@@ -45,6 +50,9 @@ header {
             a {
                 color: #0275d8;
                 text-decoration: none;
+                color: orange;
+                font-weight: bold;
+                font-size: 1.3em;
                 /* Add a color on mouse-over */
                 &:hover {
                     color: #01447e;

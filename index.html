@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,20 +17,20 @@
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
+    <section id="map-container" tabindex="-1">
       <div id="map"></div>
     </section>
     <section class="info-container">
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <div class="select">
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <form class="select">
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Dropdown menu: filter search by neighborhood">
             <option value="all">All Neighborhoods</option>
           </select>
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Dropdown menu: filter search by cuisine">
             <option value="all">All Cuisines</option>
           </select>
-        </div>
+        </form>
       </div>
       <ul id="restaurants-list"></ul>
     </section>
@@ -37,10 +38,10 @@
 
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBpcWhev-HB3pY6WUo4sL0ti-095e6PuIo &libraries=places&callback=initMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXQ74ynibYH3vgpb43DLLOGnABtMO7GXw&libraries=places&callback=initMap"></script>
 
 
-  <footer id="footer">
+  <footer id="footer" tabindex="0">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
