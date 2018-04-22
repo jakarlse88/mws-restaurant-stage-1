@@ -1,5 +1,7 @@
+/* Static cache name */
 var staticCacheName = 'rr-static-v1';
 
+/* Cache static assets on install */ 
 self.addEventListener('install', event => {
 	event.waitUntil(
 		caches.open(staticCacheName).then( cache => {
@@ -27,6 +29,7 @@ self.addEventListener('install', event => {
 	);
 });
 
+/* On activation, delete any deprecated caches */
 self.addEventListener('activate', event => {
 	event.waitUntil(
 		caches.keys().then( cacheNames => {
@@ -42,6 +45,9 @@ self.addEventListener('activate', event => {
 	);
 });
 
+/** If requested asset is cached, serve it; 
+ * if not, fetch from network and then cache 
+ */
 self.addEventListener('fetch', event => {
 	event.respondWith(
 		caches.open('rr-dynamic').then( cache => {
